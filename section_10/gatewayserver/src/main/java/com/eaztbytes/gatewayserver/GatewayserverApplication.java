@@ -21,18 +21,18 @@ public class GatewayserverApplication {
 	public RouteLocator myRoutes(RouteLocatorBuilder builder) {
 	    return builder.routes()
 	        .route(p -> p
-	            .path("/eazybank/accounts/**")
-	            .filters(f -> f.rewritePath("/eazybank/accounts/(?<segment>.*)","/${segment}")
+	            .path("/frisson123/accounts/**")
+	            .filters(f -> f.rewritePath("/frisson123/accounts/(?<segment>.*)","/${segment}")
 	            				.addResponseHeader("X-Response-Time",new Date().toString()))
 	            .uri("lb://ACCOUNTS")).
 	        route(p -> p
-		            .path("/eazybank/loans/**")
-		            .filters(f -> f.rewritePath("/eazybank/loans/(?<segment>.*)","/${segment}")
+		            .path("/frisson123/loans/**")
+		            .filters(f -> f.rewritePath("/frisson123/loans/(?<segment>.*)","/${segment}")
 		            		.addResponseHeader("X-Response-Time",new Date().toString()))
 		            .uri("lb://LOANS")).
 	        route(p -> p
-		            .path("/eazybank/cards/**")
-		            .filters(f -> f.rewritePath("/eazybank/cards/(?<segment>.*)","/${segment}")
+		            .path("/frisson123/cards/**")
+		            .filters(f -> f.rewritePath("/frisson123/cards/(?<segment>.*)","/${segment}")
 		            		.addResponseHeader("X-Response-Time",new Date().toString()))
 		            .uri("lb://CARDS")).build();
 	}

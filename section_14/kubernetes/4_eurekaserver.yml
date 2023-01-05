@@ -16,24 +16,24 @@ spec:
     spec:
       containers:
       - name: eurekaserver
-        image: eazybytes/eurekaserver:latest
+        image: frisson123/eurekaserver:latest
         ports:
         - containerPort: 8070
         env:
         - name: SPRING_PROFILES_ACTIVE
           valueFrom: 
             configMapKeyRef:
-              name: eazybank-configmap
+              name: tj-configmap
               key: SPRING_PROFILES_ACTIVE
         - name: SPRING_ZIPKIN_BASEURL
           valueFrom: 
             configMapKeyRef:
-              name: eazybank-configmap
+              name: tj-configmap
               key: SPRING_ZIPKIN_BASEURL
         - name: SPRING_CONFIG_IMPORT
           valueFrom: 
             configMapKeyRef:
-              name: eazybank-configmap
+              name: tj-configmap
               key: SPRING_CONFIG_IMPORT
 
 ---

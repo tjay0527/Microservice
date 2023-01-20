@@ -1,0 +1,6 @@
+dependencies:
+- name: tj  -common
+  repository: file://../../tj-common
+  version: 0.1.0
+digest: sha256:5018f46daede938f1a7089b4e8bd54021f3afc6b56151ae69d64574abd45411b
+generated: "2023-01-07T11:55:08.829957-08:00"
